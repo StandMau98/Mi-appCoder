@@ -1,4 +1,4 @@
-"""MTV URL Configuration
+"""PROYECTOCODER URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -15,7 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from PROYECTOCODER.views import vista_saludo
+from PROYECTOCODER.views import dia_hoy
+from PROYECTOCODER.views import nacimiento
+from PROYECTOCODER.views import vista_plantilla
+from PROYECTOCODER.views import vista_alumnos
+from PROYECTOCODER.views import vista_alumnos2
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("saludo/", vista_saludo),
+    path("Hoy/<nombre>/", dia_hoy),
+    path("Nacimiento/<edad>/", nacimiento),
+    path("Inicio/", vista_alumnos),
+    path("Home/", vista_alumnos2)
 ]
