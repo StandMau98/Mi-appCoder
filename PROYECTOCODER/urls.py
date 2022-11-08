@@ -21,6 +21,7 @@ from PROYECTOCODER.views import nacimiento
 from PROYECTOCODER.views import vista_plantilla
 from PROYECTOCODER.views import vista_alumnos
 from PROYECTOCODER.views import vista_alumnos2
+from MTV.views import Mi_familia
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,5 +29,6 @@ urlpatterns = [
     path("Hoy/<nombre>/", dia_hoy),
     path("Nacimiento/<edad>/", nacimiento),
     path("Inicio/", vista_alumnos),
-    path("Home/", vista_alumnos2)
+    path("Home/", vista_alumnos2),
+    path("Familia/", Mi_familia)
 ]
